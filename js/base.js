@@ -37,15 +37,14 @@ $(document).ready(function(){
 	document.addEventListener("headtrackingEvent", checkImgPos);
 
 	// Colorbox
-	$(".faceSlideImg").colorbox({rel:'gallery'});
-
-	// Colorbox event
-	$(document).bind('cbox_load',function(){
-		debugger;
-		detectFaceMove();
-	});
-	$(document).bind('cbox_cleanup',function(){
-		clearTimeout(_detectMoveTimer);
+	$(".faceSlideImg").colorbox({
+		rel:'gallery',
+		onOpen:function(){
+			detectFaceMove();
+		},
+		onClose:function(){
+			clearTimeout(_detectMoveTimer);
+		}
 	});
 
 
@@ -63,7 +62,7 @@ function slideOutElem(elemToHide, directionToSlide,callBackFunc)
 	}
 }
 
-// Function to slkide in element.
+// Function to slide in element.
 function slideInElem(elemToShow, directionToSlide){
 	$("#" + elemToShow).show("slide", {direction : directionToSlide});
 }
