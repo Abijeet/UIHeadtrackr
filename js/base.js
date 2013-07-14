@@ -37,6 +37,7 @@ $(document).ready(function(){
 	document.addEventListener("headtrackingEvent", checkImgPos);
 	document.addEventListener('headtrackrStatus', 
 		function (event) {
+			debugger;
 			if(event.status == "lost")
 			{
 				clearTimeout(_detectMoveTimer);
@@ -58,9 +59,7 @@ $(document).ready(function(){
 		}
 	});
 
-
-	// Make AJAX call
-	makeAjaxCall("http://yhackgestures.herokuapp.com/img?key=hello&count=10",processServerData);
+	makeAjaxCall("http://10.10.2.195:8000/top_photos",processServerData);
 });
 
 // Function to slide out element
@@ -83,7 +82,7 @@ function slideOutTopDiv()
 {
 	blurOut = setTimeout(function(){
 			// hide the top div
-			debugger;
+			
 			slideOutElem("logoSearchBox","up",showMenuBtn);			
 	},timeoutPeriod);
 }
@@ -98,8 +97,7 @@ function showMenuBtn()
 function checkImgPos( event ) {
 	_xPos = event.x;
 	_yPos = event.y;
-	_zPos = event.z;
-	console.log(event.status);
+	_zPos = event.z;	
 }
 
 function detectFaceMove()
@@ -143,21 +141,25 @@ function makeAjaxCall(urlToCall, callBackFunc)
 	/*
 	$.getJSON(url, null, success(data, textStatus, jqXHR)
 	{
-		debugger;
+		
 		callBackFunc(data);
 	});
-	*/
+	*//*
 	$.ajax({
-		dataType: 'jsonp',
+		dataType: 'jsonp',			
 		url: urlToCall,
 		success: function(data){
+
 			processServerData(data);
 		},
 		error : function(data){
 		}
-	});
+	});*/
+}
+function testme(data)
+{	
 }
 function processServerData(data)
 {
-	debugger;
+	
 }
