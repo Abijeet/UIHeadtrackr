@@ -9,7 +9,7 @@ var _checkInterval = 1000;
 $(document).ready(function(){
 	var blurOut;			
 	slideOutTopDiv();
-	$("#logoSearchBox").mouseout(function(){
+	$("#logoSearchBox").mouseleave(function(){
 		slideOutTopDiv();
 	}).mouseenter(function(){
 		// If user focuses on the div, clear the timeout.
@@ -42,6 +42,7 @@ $(document).ready(function(){
 
 	// Colorbox event
 	$(document).bind('cbox_load',function(){
+		debugger;
 		detectFaceMove();
 	});
 	$(document).bind('cbox_cleanup',function(){
