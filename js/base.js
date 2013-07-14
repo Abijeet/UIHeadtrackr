@@ -136,27 +136,6 @@ function slideImage(isForward)
 		$.colorbox.prev();
 	}
 }
-function makeAjaxCall(urlToCall, callBackFunc)
-{
-	// var url = urlToCall;
-	// url = url + "?callback=?";
-	/*
-	$.getJSON(url, null, success(data, textStatus, jqXHR)
-	{
-		debugger;
-		callBackFunc(data);
-	});
-	*/
-	$.ajax({
-		dataType: 'jsonp',
-		url: urlToCall,
-		success: function(data){
-			processServerData(data);
-		},
-		error : function(data){
-		}
-	});
-}
 function processServerData(data)
 {
 	debugger;
