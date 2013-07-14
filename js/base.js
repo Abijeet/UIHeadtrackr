@@ -5,9 +5,8 @@ var _zPos;
 var _detectMoveTimer;
 var _threshHoldVal = 5;
 var _checkInterval = 1000;
-
-$(document).ready(function(){
-	var blurOut;			
+var blurOut;
+$(document).ready(function(){			
 	slideOutTopDiv();
 	$("#logoSearchBox").mouseleave(function(){
 		slideOutTopDiv();
@@ -69,10 +68,6 @@ function slideInElem(elemToShow, directionToSlide){
 // Function slide out top div
 function slideOutTopDiv()
 {
-	if($("#logoSearchBox").is(":focus"))
-	{
-		return;
-	}
 	blurOut = setTimeout(function(){
 			// hide the top div
 			debugger;
