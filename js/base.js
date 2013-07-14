@@ -42,7 +42,8 @@ $(document).ready(function(){
 		onOpen:function(){
 			detectFaceMove();
 		},
-		onClose:function(){
+		onCleanup:function(){
+			debugger;
 			clearTimeout(_detectMoveTimer);
 		}
 	});
