@@ -89,6 +89,7 @@ function checkImgPos( event ) {
 	_xPos = event.x;
 	_yPos = event.y;
 	_zPos = event.z;
+	console.log(event.status);
 }
 
 function detectFaceMove()
