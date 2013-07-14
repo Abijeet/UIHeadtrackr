@@ -3,6 +3,8 @@ var _xPos;
 var _yPos;
 var _zPos;
 var _detectMoveTimer;
+var _threshHoldVal = 5;
+var _checkInterval = 1000;
 
 $(document).ready(function(){
 	var blurOut;			
