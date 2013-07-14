@@ -35,15 +35,25 @@ $(document).ready(function(){
 
 	// Add the event listener to the event-
 	document.addEventListener("headtrackingEvent", checkImgPos);
-
+	document.addEventListener('headtrackrStatus', 
+		function (event) {
+			if(event.status == "lost")
+			{
+				clearTimeout(_detectMoveTimer);
+			}
+			else if(event.status == "found")
+			{
+				detectFaceMove();			
+			}
+	});
+    
 	// Colorbox
 	$(".faceSlideImg").colorbox({
 		rel:'gallery',
 		onOpen:function(){
 			detectFaceMove();
 		},
-		onCleanup:function(){
-			debugger;
+		onCleanup:function(){			
 			clearTimeout(_detectMoveTimer);
 		}
 	});
