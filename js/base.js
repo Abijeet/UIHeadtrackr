@@ -48,6 +48,9 @@ $(document).ready(function(){
 		clearTimeout(_detectMoveTimer);
 	});
 
+
+	// Make AJAX call
+
 });
 
 // Function to slide out element
