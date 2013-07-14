@@ -59,8 +59,6 @@ $(document).ready(function(){
 	});
 
 
-	// Make AJAX call
-	makeAjaxCall("http://yhackgestures.herokuapp.com/img?key=hello&count=10",processServerData);
 });
 
 // Function to slide out element
