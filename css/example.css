@@ -5,9 +5,20 @@ body {
 h1,h2,h3,h4,h5,h6 {
     color: #111;
 }
-
+#openTopMenu
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:40px;
+    width:40px;
+    background-color:green;
+    z-index:999;
+    display:none;
+}
 .l-box {
-    padding: 2em;
+    padding: 0.7em 0.5em;left
+    text-align:;
 }
 
 .header .pure-menu {
