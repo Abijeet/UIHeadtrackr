@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
 	// Make AJAX call
-
+	makeAjaxCall("http://yhackgestures.herokuapp.com/img?key=hello&count=10",processServerData);
 });
 
 // Function to slide out element
@@ -124,4 +124,29 @@ function slideImage(isForward)
 		// lightbox previous
 		$.colorbox.prev();
 	}
+}
+function makeAjaxCall(urlToCall, callBackFunc)
+{
+	// var url = urlToCall;
+	// url = url + "?callback=?";
+	/*
+	$.getJSON(url, null, success(data, textStatus, jqXHR)
+	{
+		debugger;
+		callBackFunc(data);
+	});
+	*/
+	$.ajax({
+		dataType: 'jsonp',
+		url: urlToCall,
+		success: function(data){
+			processServerData(data);
+		},
+		error : function(data){
+		}
+	});
+}
+function processServerData(data)
+{
+	debugger;
 }
