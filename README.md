@@ -10,7 +10,7 @@ Yes! Just tilt your head in the direction that you want the images to go.
 Currently only works with Chrome. 
 
 
-Feel free to fork it, and play around with it.
+Feel free to fork and play around with it.
 
 Cheers!
 
