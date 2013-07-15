@@ -1,4 +1,4 @@
-Headtrackr 
+FaceSlide
 ============
 
 This is an app that me and my teammates made for the Yahoo Hackathlon in 2013, Hyderabad, India.
